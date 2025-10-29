@@ -1,0 +1,435 @@
+<!Doctype html>
+<html>
+<head>
+   <meta charset="utf-8"> 
+   <meta name="viewport" content="width=device-width, initial-scale=1"> 
+   
+   <script src="js/jquery-3.7.1.min.js"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://example.com/path/to/latoweb/font.css" rel="stylesheet">
+   <link href="css/bootstrap.min.css" rel="stylesheet">
+   <link href="css/style.css" rel="stylesheet">
+   <script src="js/bootstrap.bundle.min.js"></script>
+   
+   <script>
+      $(document).ready(function(){
+	  $("#step1").addClass("complete active");
+	     $("#step1").click(function(){
+		    $("#Block_1NdmlPANDetails").css("display","block");
+			$("#Block_8NdmlUploadDocuments").css("display","none");
+			$(".footer-page1").css("display","block");
+			$(".footer-page2").css("display","none");
+			$("#step2").removeClass("complete")
+			$("#step1").addClass("complete active")
+		 });
+		 $("#step2").click(function(){
+		    $("#Block_8NdmlUploadDocuments").css("display","block");
+			$("#Block_1NdmlPANDetails").css("display","none");
+			$(".footer-page1").css("display","none");
+			$(".footer-page2").css("display","block");
+			$("#step1").removeClass("complete");
+			$("#step2").addClass("complete active")
+		 });
+	  });
+   </script>
+	
+</head>
+  
+<body>
+
+<section class="wrap">
+   <aside class="left-section">
+      <div class="progress-area">
+	     <div class="app-logo p-3">
+	      <!--  <p>Instigo</p> -->
+		   <a href="#"><img src="images/hdfc-logo.png"></a>
+		   <div class="logo-content p-3" style="display:none;">
+        	<p>Instigo DIY</p>
+			<!-- <a href="#"><img src="images/emudhra-logo.png"></a> -->
+		</div>
+	     </div>
+		 <hr class="horizontal">
+		  <div class="progressBar mt-2">
+	     <!-- First pair of circle and line -->
+		 <div class="progressitems" id="step1">
+            <span class="circle"></span>
+			 <a href="#" class="stepper-link"><span>Step 1</span><span class="page-name">Pan Details</span></a>
+         </div>
+  
+	     <div class="progressitems" id="step2">
+               <span class="circle"></span>
+			   <a href="#" class="stepper-link"><span>Step 2</span><span class="page-name">Address Details</span></a>
+        </div>
+	
+	     <div class="progressitems" id="step3">
+           <span class="circle"></span>
+		   	<a href="#" class="stepper-link"><span>Step 3</span><span class="page-name">KRA Details</span></a>
+        </div>
+		
+		<div class="progressitems" id="step4">
+           <span class="circle"></span>
+		   <a href="#" class="stepper-link"><span>Step 4</span><span class="page-name">Bank Details</span></a>
+        </div>
+		
+		<div class="progressitems" id="step5">
+           <span class="circle"></span>
+		   <a href="#" class="stepper-link"><span>Step 5</span><span class="page-name">Segment Details</span></a>
+        </div>
+  </div>
+   <div class="poweredby-logo p-3">
+        	<p>Instigo DIY</p>
+			<!-- <a href="#"><img src="images/emudhra-logo.png"></a> -->
+		</div>
+	  </div>
+      
+      
+
+	 
+	  
+   </aside>
+   
+   <article class="right-section">
+		
+    <div class="user_Block p-5" id="Block_1NdmlPANDetails">
+    <div class="form-section-wrapper">
+       <div class="form-heading">
+            <h4>PAN Details</h4>
+        </div> 
+        <div class="form-section pt-3">
+                <div class="row">
+				
+                <div class="col-md-6 col-xl-4 mb-3" id="EnablePAN_1">
+                    <div class="eSctr-box">
+                       <!--  <label class="fl-label">PAN</label> -->
+                        <input type="text" class="form-control" name="PAN" id="txtPAN_1" maxlength="10"
+                               placeholder="Enter Pan Number">
+
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4 mb-3" id="EnablePANName_1">
+                    <div class="eSctr-box">
+                       <!--  <label class="fl-label">Name in PAN</label> -->
+                        <input type="text" class="form-control" name="PANName" id="txtPANName_1" maxlength="100"
+                               placeholder="Name in PAN">
+
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4 mb-3" id="EnableDOB_1">
+                    <div class="eSctr-box">
+                       <!--  <label class="fl-label">Date of Birth</label> -->
+                        <input type="text" class="form-control" name="DateOfBirth" id="txtDateOfBirth_1"
+                               placeholder="Date of Birth" maxlength="8">
+
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4 mb-3" id="EnableGender_1">
+                    <!-- <label class="fl-label">Gender</label> -->
+					 <div class="eSctr-box">
+                        <select class="form-select" id="ddlState_1" name="Gender">
+						   <option value="">Select Gender</option>
+						   <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Others">Others</option>
+						</select>
+					</div>
+                    <!-- <div class="form-control mb-3 mb-md-0" style="border:none;border-bottom:none !important">
+                        <div class="d-flex mt-1 align-items-center justify-content-between gap-2 gap-md-0">
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" name="gender" type="radio" id="rdoMale_1" value="Male">
+                                <label class="form-check-label" for="rdoMale_1">Male</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" name="gender" type="radio" id="rdoFemale_1"
+                                       value="Female">
+                                <label class="form-check-label" for="rdoFemale_1">Female</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" name="gender" type="radio" id="rdoOthers_1"
+                                       value="Others">
+                                <label class="form-check-label" for="rdoOthers_1">Others</label>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="col-md-6 col-xl-4 mb-3" id="EnableAddressLine1_1">
+                   <!--  <label class="fl-label">Address Line 1</label> -->
+                    <div class="eSctr-box">
+                        <input type="text" class="form-control" name="AddressLine1" id="txtAddressLine1_1"
+                               placeholder="Address Line 1" maxlength="500">
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4 mb-3" id="EnableAddressLine2_1">
+                    <div class="eSctr-box">
+                       <!--  <label class="fl-label">Address Line 2</label> -->
+                        <input type="text" class="form-control" name="AddressLine2" id="txtAddressLine2_1"
+                               placeholder="Address Line 2" maxlength="500">
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4 mb-3" id="EnableCountry_1">
+                    <div class="eSctr-box">
+                        <!-- <label class="fl-label">Country</label> -->
+                        <input type="text" class="form-control" name="Country" value="India" id="txtCountry_1"
+                               placeholder="" maxlength="8" readonly>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4 mb-3" id="EnableState_1">
+                  <!--   <label class="fl-label">State/Province</label> -->
+                    <div class="eSctr-box">
+                        <select class="form-select" id="ddlState_1" name="State">
+                            <option value="">Select State</option>
+                            <option value="Andhra Pradesh">Andhra Pradesh</option>
+                            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                            <option value="Assam">Assam</option>
+                            <option value="Bihar">Bihar</option>
+                            <option value="Chhattisgarh">Chhattisgarh</option>
+                            <option value="Goa">Goa</option>
+                            <option value="Gujarat">Gujarat</option>
+                            <option value="Haryana">Haryana</option>
+                            <option value="Himachal Pradesh">Himachal Pradesh</option>
+                            <option value="Jharkhand">Jharkhand</option>
+                            <option value="Karnataka">Karnataka</option>
+                            <option value="Kerala">Kerala</option>
+                            <option value="Madhya Pradesh">Madhya Pradesh</option>
+                            <option value="Maharashtra">Maharashtra</option>
+                            <option value="Manipur">Manipur</option>
+                            <option value="Meghalaya">Meghalaya</option>
+                            <option value="Mizoram">Mizoram</option>
+                            <option value="Nagaland">Nagaland</option>
+                            <option value="Odisha">Odisha</option>
+                            <option value="Punjab">Punjab</option>
+                            <option value="Rajasthan">Rajasthan</option>
+                            <option value="Sikkim">Sikkim</option>
+                            <option value="Tamil Nadu">Tamil Nadu</option>
+                            <option value="Telangana">Telangana</option>
+                            <option value="Tripura">Tripura</option>
+                            <option value="Uttar Pradesh">Uttar Pradesh</option>
+                            <option value="Uttarakhand">Uttarakhand</option>
+                            <option value="West Bengal">West Bengal</option>
+                            <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                            <option value="Chandigarh">Chandigarh</option>
+                            <option value="Dadra and Nagar Haveli and Daman and Diu">Dadra and Nagar Haveli and
+                                Daman and Diu
+                            </option>
+                            <option value="Lakshadweep">Lakshadweep</option>
+                            <option value="Delhi">Delhi</option>
+                            <option value="Puducherry">Puducherry</option>
+                            <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                            <option value="Ladakh">Ladakh</option>
+                        </select>
+
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4 mb-3" id="EnableCity_1">
+                   <!--  <label class="fl-label">City</label> -->
+                    <div class="eSctr-box">
+                        <input type="text" class="form-control" name="City" id="txtCity_1" placeholder="City"
+                               maxlength="200">
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4 mb-3" id="EnablePincode_1">
+                    <!-- <label class="fl-label">Pincode</label> -->
+                    <div class="eSctr-box">
+                        <input type="text" class="form-control" name="Pincode" id="txtPincode_1" placeholder="Pincode"
+                               maxlength="6">
+                    </div>
+                </div>
+				</div>
+            </div>
+        </div>
+        
+    </div>
+	
+	<div class="user_Block p-5" id="Block_8NdmlUploadDocuments" style="display:none">
+    <div class="form-section-wrapper">
+        <div class="form-heading">
+            <h4>Document Uploads</h4>
+        </div>
+        <div class="form-section">
+            <label class="h6">Let's click pictures / upload documents</label>
+            <div class="applicant-details-section mt-4">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="upload-document-section section-1">
+                            <h6>Signature</h6>
+                            <div class="section-desp">Sign on white paper, take a picture and upload. Uploaded image should be properly visible.</div>
+                            <div id="signature-preview_8" class="upload-area d-flex align-items-center justify-content-center my-3 upload-img-preview">
+							    <span class="icon"><i class="fa fa-cloud-upload"></i></span>
+                                <!-- <span class="text-muted">Preview</span> -->
+                                <img id="signature-image_8" src="" class="img-fluid" style="display: none">
+                            </div>
+                            <div><b>Note:-</b> Upload image in .JPEG or .PNG format with less than 64KB.</div>
+                            <div class="text-center mt-3">
+                                <button type="button" class="btn btn-orange open-camera-btn mx-2 mb-2" data-max-size="64KB" id="click-signature-btn_8">CLICK PICTURE</button>
+                                <!-- File input for signature upload -->
+                                <input type="file" id="signature-file-input_8" class="upload-file_8" accept="image/jpeg, image/png" style="display:none;">
+                                <button type="button" class="btn btn-orange upload-file-btn mb-2" data-max-size="64KB" id="upload-signature-btn_8">UPLOAD</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Camera Modal (Hidden by default) -->
+                    <div id="camera-modal" class="modal" style="display:none;">
+                        <div class="modal-content">
+                            <video id="video" width="100%" height="auto" autoplay></video>
+                            <canvas id="canvas" style="display:none;"></canvas>
+                            <button type="button" id="capture-btn">Capture</button>
+                            <button type="button" id="close-camera-btn">Close</button>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="upload-document-section section-2">
+                            <h6>Photo</h6>
+                            <div class="section-desp">Please take your selfie/photo with PAN card. Your face and PAN card should be clearly visible.</div>
+                            <div id="photo-preview_8" class="upload-area d-flex align-items-center justify-content-center my-3 upload-img-preview">
+							    <span class="icon"><i class="fa fa-cloud-upload"></i></span>
+                                <!-- <span class="text-muted">Preview</span> -->
+                                <img id="photo-image_8" src="" class="img-fluid" style="display: none">
+                            </div>
+                            <div class="invisible"><b>Note:-</b> Upload image in .JPEG or .PNG format with less than 64KB.</div>
+                            <div class="text-center mt-3">
+                                <button type="button" class="btn btn-orange open-camera-btn mx-2 mb-2" data-max-size="64KB" id="click-photo-btn_8">CLICK PICTURE</button>
+                                <input type="file" id="photo-file-input_8" class="upload-file_8" accept="image/jpeg, image/png" style="display:none;">
+                                <button type="button" class="btn btn-orange upload-file-btn mb-2" data-max-size="64KB" id="upload-photo-btn_8">UPLOAD</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="upload-document-section section-3">
+                            <h6>PAN Card</h6>
+                            <div class="section-desp">Kindly upload <b>SCAN</b> image of <b>ORIGINAL PAN</b> (front Side) <b>OR</b> Take a picture of <b>ORIGINAL PAN</b>. <b>DO NOT</b> upload scan image or <b>COPY of PAN</b>.</div>
+                            <div id="pan_preview_8" class="upload-area d-flex align-items-center justify-content-center my-3 upload-img-preview">
+							    <span class="icon"><i class="fa fa-cloud-upload"></i></span>
+                               <!--  <span class="text-muted">Preview</span> -->
+                                <img  id="pan_image_8" src="" class="img-fluid" style="display: none">
+                            </div>
+                            <div><b>Note:-</b> Upload image in .JPEG or .PNG or .pdf format with less than 20MB.</div>
+                            <div class="text-center mt-3">
+                                <button type="button" class="btn btn-orange open-camera-btn mb-2" data-max-size="20MB" id="click-pan-btn_8">CLICK PICTURE</button>
+                            </div>
+                        </div>
+                    </div>
+					 <div class="col-sm-1">
+					 </div>
+                    <div class="col-sm-5">
+                        <div class="upload-document-section section-4">
+                            <h6>Income proof</h6>
+                            <div class="section-desp">Please upload copy of the document</div>
+                            <div id="income-preview_8" class="upload-area d-flex align-items-center justify-content-center my-3 upload-img-preview">
+							    <span class="icon"><i class="fa fa-cloud-upload"></i></span>
+                                <!-- <span class="text-muted">Preview</span> -->
+                                <img id="income-image_8" src="" class="img-fluid" style="display: none">
+                            </div>
+                            <div class="section-doc-type">
+                                <select class="form-select" id="income-proof-doctype_8">
+                                    <option value="">Please select document type</option>
+                                    <option value="3Msalaryslip">Salary slip (last 3 months in zip format)</option>
+                                    <option value="ITreturn">IT return (for last FY)</option>
+                                    <option value="bankStatement">Bank Statement (for past 6 months - only if salary is credited in the account)</option>
+                                </select>
+                            </div>
+                            <div class="text-center mt-3">
+                                <input type="file" id="income-file-input_8" class="upload-file_8" accept="image/jpeg, image/png" style="display:none;">
+                                <button type="button" class="btn btn-orange" id="upload-incomeproof-btn_8">UPLOAD</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-5">
+                        <div class="upload-document-section section-5">
+                            <h6>Other Supporting (Optional)</h6>
+                            <div class="section-desp">Please upload copy of the document</div>
+                            <div id="#optional-preview_8" class="upload-area d-flex align-items-center justify-content-center my-3 upload-img-preview">
+							    <span class="icon"><i class="fa fa-cloud-upload"></i></span>
+                               <!--  <span class="text-muted">Preview</span> -->
+                                <img src="" id="optional-image_8" class="img-fluid" style="display: none">
+                            </div>
+                            <div class="section-doc-type">
+                                <select class="form-select" id="optional-proof-doctype_8">
+                                    <option value="">Please select document type</option>
+                                    <option value="IdCardByCentral">ID Card with photo issued by Central/State Govt</option>
+                                    <option value="IdCardByStatutory">ID Card with photo issued by Statutory/Regulatory Authorities</option>
+                                    <option value="IdCardByPSU">ID Card with photo issued by Public Sector Undertakings</option>
+                                    <option value="IdCardByCB">ID Card with photo issued by Scheduled Commercial Banks</option>
+                                    <option value="IdCardByPFI">ID Card with photo issued by Public Financial Institutions</option>
+                                    <option value="IdCardByCollege">ID Card with photo issued by Colleges affiliated to Universities</option>
+                                    <option value="IdCardByPB">ID Card with photo issued by Professional Bodies such as ICAI, ICWAI, ICSI, Bar Council etc., to their Members</option>
+                                    <option value="CCDC">Credit cards/Debit cards issued by Banks</option>
+                                    <option value="RationCard">Ration Card</option>
+                                    <option value="RegisteredLease">Registered Lease or Sale Agreement of Residence</option>
+                                    <option value="FlatMaintenanceBill">Flat Maintenance bill</option>
+                                    <option value="InsuranceCopy">Insurance Copy</option>
+                                    <option value="UtilityBills">Utility bills like Telephone Bill (land line), Electricity bill or Gas bill</option>
+                                    <option value="AcStatement">Bank Account Statement/Passbook</option>
+                                    <option value="SelfDeclaration">Self-declaration by High Court and Supreme Court judges</option>
+                                    <option value="POAbyBM">Proof of address issued by Bank Managers of Scheduled Commercial / Scheduled Co-Operative / Multinational Foreign Banks</option>
+                                    <option value="POAbyGO">Proof of address issued by Gazetted Officer</option>
+                                    <option value="POAbyNotary">Proof of address issued by Notary public</option>
+                                    <option value="POAbyMLA">Proof of address issued by Elected representatives to the Legislative Assembly</option>
+                                    <option value="POAbyParliament">Proof of address issued by Parliament</option>
+                                    <option value="POAbySA">Proof of address issued by any Govt. or Statutory Authority</option>
+                                    <option value="POAbyFII">Power Of Attorney given by FII/sub-account to Custodian (duly notarized and/or apostilled or consularised) giving registered address</option>
+                                    <option value="POAspouse">Proof of address in the name of the spouse</option>
+                                    <option value="others">Others</option>
+                                </select>
+                            </div>
+                            <div class="text-center mt-3">
+                                <input type="file" id="optional-file-input_8" class="upload-file_8" accept="image/jpeg, image/png" style="display:none;">
+                                <button type="button" class="btn btn-orange" id="upload-supportingdocs-btn_8">UPLOAD</button>
+                            </div>
+                        </div>
+                    </div>
+					<div class="col-md-1"></div>
+                </div>
+            </div>
+            <div class="applicant-details-section mb-4">
+                <label><b>Nomination</b></label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="nomination-option" id="nomination-yes_8" value="I wish to make nomination.">
+                    <label class="form-check-label" for="nomination-yes_8">
+                        I wish to make nomination.
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="nomination-option" id="nomination-no_8" value="I wish to Opt-out of nomination." checked>
+                    <label class="form-check-label" for="nomination-no_8">
+                        I wish to Opt-out of nomination.
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+        <div class="footer">
+		     <div class="footer-page1 px-1 py-2">
+			    <div class="tab-area float-end">
+                   <div class="prevDetails" id="block_Back_1NdmlPANDetails" style="display:none;">
+                     <a href="#" id="btnBack_1NdmlPANDetails" class="btn btn-grey backview" onclick="ManageSteps(this);">
+                     <i class="fa fa-angle-left" aria-hidden="true"></i> Back
+                     </a>
+                  </div>
+                  <div class="btn btn-primary nextView" id="btnContinue_1NdmlPANDetails">Next</div>
+               </div>
+			 </div>
+			
+		    <div class="footer-page2 px-1 py-2" style="display:none;">
+			   <div class="tab-area d-flex">
+			      <div class="prevDetails" id="block_Back_8NdmlUploadDocuments">
+                    <a href="#" id="btnBack_8NdmlUploadDocuments" class="btn btn-grey backview" onclick="ManageSteps(this);">
+                    <i class="fa fa-angle-left" aria-hidden="true"></i> Back
+                    </a>
+                </div>
+                <div class="btn btn-primary nextView" id="btnContinue_8NdmlUploadDocuments">Next</div>
+			   </div>
+			</div>
+			
+			<div class="footer-section p-2">
+			   <p>HelpDesk-ContactNo: 91 22 6856 5115</p>
+			   <p>©2020 Powered by NSDL.</p>
+			</div>
+        </div>
+   </article>
+</section>
+
+</body>
+</html>
